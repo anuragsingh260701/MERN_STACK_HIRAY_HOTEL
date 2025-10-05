@@ -23,7 +23,7 @@ app.use(
       }
       return callback(null, true);
     },
-    methods: ["POST", "GET"],
+    methods: ["POST", "GET", "OPTIONS"],
     credentials: true,
   })
 );
