@@ -26,12 +26,12 @@ app.get("/", (req, res, next)=>{return res.status(200).json({
   message: "HELLO WORLD AGAIN"
 })})
 
- // dbConnection();
+dbConnection();
 
 app.use(errorMiddleware);
 
-app.listen(4000, () => {
-  console.log(`Server running on http://localhost:4000`);
+app.listen(process.env.PORT || 4000, () => {
+  console.log(`Server running on port ${process.env.PORT || 4000}`);
 });
 
 export default app;
